@@ -5,8 +5,8 @@ export default defineConfig({
   extensionApi: 'chrome',
   modules: ['@wxt-dev/module-react', '@wxt-dev/auto-icons'],
   manifest: {
-    name: 'ZenYoutube',
-    description: 'ZenYoutube is a browser extension that helps you to watch youtube videos in a zen mode.',
+    name: 'YouFocus',
+    description: 'YouFocus is a browser extension that enhances your YouTube experience by providing a distraction-free, immersive viewing mode.',
     version: '0.1.0',
     permissions: ['tabs', 'storage'],
     icons: {

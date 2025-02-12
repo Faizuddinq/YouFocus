@@ -1,11 +1,11 @@
 :root {
-	--zen-mode-status: "not-activated";
+	--youfocus-mode-status: "not-activated";
 }
 
-/* Only apply these styles when zen mode is activated */
+/* Only apply these styles when youfocus mode is activated */
 @media screen {
-	:root[style*="--zen-mode-status:activated"],
-	:root[style*="--zen-mode-status: activated"] {
+	:root[style*="--youfocus-mode-status:activated"],
+	:root[style*="--youfocus-mode-status: activated"] {
 		#columns #secondary {
 			visibility: hidden !important;
 		}

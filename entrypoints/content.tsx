@@ -13,13 +13,13 @@ export default defineContentScript({
 	runAt: "document_end",
 	async main(ctx) {
 		console.log("Hello content.");
-		const zenModeStatus = await storage.getItem("local:zen-mode-status", {
+		const youfocusModeStatus = await storage.getItem("local:youfocus-mode-status", {
 			fallback: "not-activated",
 		});
 
-		if (zenModeStatus === "activated") {
+		if (youfocusModeStatus === "activated") {
 			document.documentElement.style.setProperty(
-				"--zen-mode-status",
+				"--youfocus-mode-status",
 				"activated"
 			);
 
@@ -34,7 +34,7 @@ export default defineContentScript({
 			}
 		} else {
 			document.documentElement.style.setProperty(
-				"--zen-mode-status",
+				"--youfocus-mode-status",
 				"not-activated"
 			);
 		}
@@ -43,7 +43,7 @@ export default defineContentScript({
 
 async function mountShadowRootUi(ctx: ContentScriptContext) {
 	uiRef = await createShadowRootUi(ctx, {
-		name: "zen-ui",
+		name: "youfocus-ui",
 		position: "inline",
 		anchor: "body",
 		onMount: (container) => {
