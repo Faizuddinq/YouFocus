@@ -1,5 +1,6 @@
 import "@/assets/main.css";
-import ZenIcon from "@/components/Icon";
+import { MdOutlineYoutubeSearchedFor } from "react-icons/md";
+
 import { useState } from "react";
 
 export default function Search() {
@@ -22,18 +23,18 @@ export default function Search() {
 
 	return (
 		<div className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-slate-50">
-			<h1 className="text-4xl font-bold mb-8 text-slate-800 flex items-center gap-3">
-				<ZenIcon />
+			<h1 className="text-4xl font-bold mb-8 text-primary flex items-center gap-3">
+				<MdOutlineYoutubeSearchedFor/>
 				What are you looking for?
 			</h1>
-			<div className="w-full max-w-2xl px-4">
+			<div className="w-full max-w-2xl px-4 ">
 				<input
 					type="text"
-					placeholder="Search..."
+					placeholder="Search youtube video..."
 					value={searchQuery}
 					onKeyDown={handleSearch}
 					onChange={(e) => setSearchQuery(e.target.value)}
-					className="w-full px-6 py-4 text-lg rounded-full border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+					className="w-full px-6 py-4 text-lg rounded-full border border-accent bg-gray-100   shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
 				/>
 				{error && <p className="text-red-500 mt-2 text-sm">{error}</p>}
 			</div>
